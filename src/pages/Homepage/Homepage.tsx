@@ -12,7 +12,7 @@ export const Homepage = () => {
         src={codeleapLogo}
         alt='logo codeleap preto'
       />
-      <Link className={styles.accessMessage} to='/access'>
+      <Link className={styles.accessButton} to='/signup'>
         begin
       </Link>
     </section>

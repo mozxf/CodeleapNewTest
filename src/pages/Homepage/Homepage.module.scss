@@ -1,4 +1,4 @@
-@import '../../src/Variables.scss';
+@import '/src/Variables.scss';
 
 .wrapper {
   width: 100vw;
@@ -8,26 +8,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.625rem;
 }
 
 .codeleapLogo {
   opacity: 0;
-  width: 20vmax;
+  width: 25vmax;
+  min-width: 12.5rem;
   animation: 2s animateLogo forwards;
   animation-delay: 1s;
 }
 
-.accessMessage {
+.accessButton {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 400;
   color: $color-white;
-  background-color: #1f1e1e;
-  padding: 10px 15px;
-  border-radius: 4px;
+  background-color: $color-darkGray;
+  padding: 0.625rem 1rem;
+  border-radius: 0.25rem;
   text-decoration: none;
   opacity: 0;
-  animation: 1s animateMessage forwards;
+  animation: 1s animateButton forwards;
   animation-delay: 3s;
 }
 
@@ -42,7 +44,7 @@
   }
 }
 
-@keyframes animateMessage {
+@keyframes animateButton {
   from {
     opacity: 0;
     transform: translate3d(0, -50px, 0);

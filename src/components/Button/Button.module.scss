@@ -1,0 +1,15 @@
+@import '../../Variables.scss';
+
+.button {
+  cursor: pointer;
+  place-self: end;
+  background-color: $color-black;
+  color: $color-white;
+  text-transform: uppercase;
+  padding: 0.4375rem 1.875rem;
+}
+
+.button:disabled {
+  cursor: initial;
+  background-color: $color-lightGray;
+}
