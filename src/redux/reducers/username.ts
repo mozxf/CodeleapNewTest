@@ -1,4 +1,4 @@
-import { createReducer, createSlice } from '@reduxjs/toolkit';
+import { createReducer } from '@reduxjs/toolkit';
 import { defineUsername } from '@/actions/usernameActions';
 
 export type TUsername = {
@@ -7,7 +7,7 @@ export type TUsername = {
 
 const initialState: TUsername = { value: '' };
 
-export const usernameReducer = createReducer(initialState, (builder) => {
+export const username = createReducer(initialState, (builder) => {
   builder.addCase(defineUsername, (state, action) => {
     state.value = action.payload;
   });

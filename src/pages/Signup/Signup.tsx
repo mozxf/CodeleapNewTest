@@ -1,10 +1,11 @@
 import styles from './Signup.module.scss';
-import { useDispatch } from 'react-redux';
-import { Input } from '@/components/Input/Input';
 import { defineUsername } from '@/actions/usernameActions';
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Input } from '@/components/Input/Input';
 import { Button } from '@/components/Button/Button';
+import { Title } from '@/components/Title/Title';
 
 export const Signup = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ export const Signup = () => {
   return (
     <section className={styles.background}>
       <form onSubmit={handleSubmit} className={styles.usernameForm}>
-        <h2 className={styles.title}>Welcome to CodeLeap network!</h2>
+        <Title>Welcome to CodeLeap network!</Title>
         <Input
           label='Please enter your username'
           id='username'

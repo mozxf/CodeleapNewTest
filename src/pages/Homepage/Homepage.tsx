@@ -6,7 +6,7 @@ const codeleapLogo = '../../src/assets/codeleap-logo-black.svg';
 
 export const Homepage = () => {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.background}>
       <img
         className={styles.codeleapLogo}
         src={codeleapLogo}
