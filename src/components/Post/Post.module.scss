@@ -5,17 +5,30 @@
 }
 
 .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   width: 100%;
-  max-height: 4.375rem;
-  height: 3.645vmax;
+  min-height: 3.645vmax;
   padding: 1.5rem 1.875rem;
   background: $color-black;
+  overflow-wrap: break-word;
+}
+
+.postChangesButtonsWrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  place-self: end;
+}
+
+.postChangesButtonsWrapper img {
+  cursor: pointer;
 }
 
 .title {
   color: $color-white;
+  width: 100%;
 }
 
 .contentWrapper {

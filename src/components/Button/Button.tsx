@@ -1,14 +1,20 @@
+import React, { ChangeEventHandler, MouseEventHandler } from 'react';
 import styles from './Button.module.scss';
 
 interface IButton {
   children: string;
   className?: string;
-  disabled: boolean;
+  disabled?: boolean;
+  onClick?: MouseEventHandler;
 }
 
-export const Button = ({ children, className, disabled }: IButton) => {
+export const Button = ({ children, className, disabled, onClick }: IButton) => {
   return (
-    <button disabled={disabled} className={`${styles.button} ${className}`}>
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`${styles.button} ${className}`}
+    >
       {children}
     </button>
   );

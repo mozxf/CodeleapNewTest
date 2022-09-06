@@ -1,3 +1,4 @@
+import { ChangeEventHandler } from 'react';
 import styles from './Input.module.scss';
 
 interface IInput {
@@ -5,7 +6,7 @@ interface IInput {
   id: string;
   type?: 'text' | 'password';
   value: string;
-  onChange: any;
+  onChange: ChangeEventHandler;
   placeholder?: string;
   textarea?: boolean;
 }

@@ -5,7 +5,13 @@ export type TUsername = {
   value: string;
 };
 
-const initialState: TUsername = { value: '' };
+const initialState: TUsername = (() => {
+  const localUsername = localStorage.getItem('username');
+  if (localUsername) {
+    return { value: localUsername };
+  }
+  return { value: '' };
+})();
 
 export const username = createReducer(initialState, (builder) => {
   builder.addCase(defineUsername, (state, action) => {

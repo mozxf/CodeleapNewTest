@@ -1,0 +1,21 @@
+@import '../../Variables.scss';
+
+.background {
+  background: $color-darkGray1-080;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-open='true'] {
+  display: flex;
+}
+
+.editPostForm {
+  background: $color-white;
+  width: 37.65vmax;
+  max-width: 45.18rem;
+}

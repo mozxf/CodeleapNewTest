@@ -2,7 +2,7 @@
 
 .background {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   height: fit-content;
   background: $color-lightGray;
   overflow: hidden;
@@ -12,9 +12,9 @@
 
 .content {
   width: 41.6vmax;
-  min-height: 100vh;
-  height: fit-content;
+  height: 100vh;
   max-width: 50rem;
+  overflow: scroll;
 }
 
 ::-webkit-scrollbar {
@@ -54,20 +54,7 @@
 }
 
 .mainContent {
-  height: 100%;
+  height: fit-content;
   padding: 2.75rem 2.375rem;
   background: $color-white;
-}
-
-.createPostForm {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  border: 1px solid $color-gray2;
-  padding: 1.75rem 2rem;
-  margin-bottom: 2rem;
-}
-
-.title {
-  margin-bottom: 0.625rem;
 }

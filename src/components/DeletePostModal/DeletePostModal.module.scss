@@ -1,0 +1,50 @@
+@import '../../Variables.scss';
+
+.background {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: $color-darkGray1-080;
+}
+
+[data-open='true'] {
+  display: flex;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: $color-white;
+  width: 34.427vmax;
+  max-width: 41.25rem;
+  height: 8.75vmax;
+  max-height: 10.5rem;
+  position: absolute;
+  padding: 2rem 3rem;
+  margin-top: 7.75rem;
+}
+
+.title {
+  font-weight: 400;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-self: end;
+  gap: 1rem;
+}
+
+.button {
+  border: 1px solid $color-black;
+  background-color: $color-white;
+  color: $color-black;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: $color-black;
+  color: $color-white;
+}

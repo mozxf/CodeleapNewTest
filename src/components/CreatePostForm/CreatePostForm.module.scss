@@ -1,0 +1,14 @@
+@import '../../Variables.scss';
+
+.createPostForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border: 1px solid $color-gray2;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  margin-bottom: 0.625rem;
+}
