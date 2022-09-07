@@ -1,4 +1,4 @@
-import { createAction, createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import { IPost, IPostDTO } from '@/components/Post/Post';
 
 export const definePosts = createAsyncThunk<IPost[]>(

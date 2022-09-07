@@ -2,7 +2,7 @@ import styles from './EditPostModal.module.scss';
 
 import React, { useEffect, useState } from 'react';
 import { CreatePostForm } from '../CreatePostForm/CreatePostForm';
-import { connect, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '@/redux/store';
 import { TEditHandler } from '@/redux/reducers/modal';
 import { setEditModalVisible } from '@/actions/modalActions';

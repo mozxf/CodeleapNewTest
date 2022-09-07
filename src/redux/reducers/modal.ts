@@ -6,7 +6,7 @@ import {
   setidToEdit,
   setToEditPostData,
 } from '@/actions/modalActions';
-import { IPost, IPostDTO } from '@/components/Post/Post';
+import { IPostDTO } from '@/components/Post/Post';
 
 export type TEditHandler = {
   open: boolean;

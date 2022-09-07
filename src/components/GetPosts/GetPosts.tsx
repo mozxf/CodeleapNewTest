@@ -1,7 +1,6 @@
 import styles from './GetPosts.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Post, IPost } from '@/components/Post/Post';
-import { formatDistance } from 'date-fns';
 import { useDispatch, useSelector } from 'react-redux';
 import { definePosts } from '@/actions/postsActions';
 import { AppDispatch, RootState } from '@/redux/store';

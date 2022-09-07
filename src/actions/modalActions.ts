@@ -1,4 +1,4 @@
-import { IPost, IPostDTO } from '@/components/Post/Post';
+import { IPostDTO } from '@/components/Post/Post';
 import { createAction } from '@reduxjs/toolkit';
 
 export const setEditModalVisible = createAction<boolean>(

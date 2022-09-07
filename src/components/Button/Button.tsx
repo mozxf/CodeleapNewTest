@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, MouseEventHandler } from 'react';
+import React, { MouseEventHandler } from 'react';
 import styles from './Button.module.scss';
 
 interface IButton {
