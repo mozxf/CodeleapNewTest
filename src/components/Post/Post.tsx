@@ -10,6 +10,8 @@ import {
   setToEditPostData,
 } from '@/actions/modalActions';
 import { formatDistance } from 'date-fns';
+import Delete from '/src/assets/VectorDelete.svg';
+import Edit from '/src/assets/VectorEdit.svg';
 
 export interface IPost {
   id: number;
@@ -57,15 +59,8 @@ export const Post = ({
         <Title className={styles.title}>{title}</Title>
         {currentUser == username && (
           <div className={styles.postChangesButtonsWrapper}>
-            <img
-              src='/src/assets/VectorDelete.svg'
-              onClick={handleOpenDelete}
-            />
-            <img
-              onClick={handleOpenEdit}
-              src='/src/assets/VectorEdit.svg'
-              alt=''
-            />
+            <img src={Delete} onClick={handleOpenDelete} />
+            <img onClick={handleOpenEdit} src={Edit} alt='' />
           </div>
         )}
       </header>
