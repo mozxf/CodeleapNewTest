@@ -16,6 +16,20 @@
 
 .editPostForm {
   background: $color-white;
-  width: 37.65vmax;
-  max-width: 45.18rem;
+  width: 45.18rem;
+}
+
+@media (max-width: 1000px) {
+  .editPostForm {
+    width: 28rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .editPostForm {
+    width: 80%;
+  }
+
+  .button {
+  }
 }

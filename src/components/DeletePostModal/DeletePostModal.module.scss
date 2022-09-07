@@ -18,13 +18,11 @@
   flex-direction: column;
   justify-content: space-between;
   background: $color-white;
-  width: 34.427vmax;
-  max-width: 41.25rem;
-  height: 8.75vmax;
-  max-height: 10.5rem;
+  width: 41.25rem;
+  height: 10.5rem;
   position: absolute;
   padding: 2rem 3rem;
-  margin-top: 7.75rem;
+  margin-top: 6.45vmax;
 }
 
 .title {
@@ -47,4 +45,26 @@
 .button:hover {
   background: $color-black;
   color: $color-white;
+}
+
+@media (max-width: 1000px) {
+  .modal {
+    width: 26rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .modal {
+    width: 95%;
+    height: fit-content;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+  }
 }

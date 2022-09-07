@@ -1,17 +1,21 @@
 import styles from './Signup.module.scss';
 import { defineUsername } from '@/actions/usernameActions';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Input } from '@/components/Input/Input';
 import { Button } from '@/components/Button/Button';
 import { Title } from '@/components/Title/Title';
+import { RootState } from '@/redux/store';
+import { TUsername } from '@/redux/reducers/username';
 
 export const Signup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const [username, setUsername] = useState<string>('');
+  const localUser = useSelector<RootState>(
+    (state) => state.username
+  ) as TUsername;
+  const [username, setUsername] = useState<string>(localUser.value);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();

@@ -11,10 +11,16 @@
 
 .usernameForm {
   background: $color-white;
-  width: 26.041vmax;
-  max-width: 31.25rem;
+  border: 1px solid $color-lighterGray;
+  width: 31.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   padding: 1.6rem;
+}
+
+@media (max-width: 550px) {
+  .usernameForm {
+    width: 95%;
+  }
 }

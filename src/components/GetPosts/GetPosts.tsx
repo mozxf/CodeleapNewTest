@@ -1,5 +1,5 @@
 import styles from './GetPosts.module.scss';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Post, IPost } from '@/components/Post/Post';
 import { formatDistance } from 'date-fns';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,9 +10,16 @@ export const GetPosts = () => {
   const dispatch = useDispatch<AppDispatch>();
   const postsData = useSelector<RootState>((state) => state.posts) as IPost[];
 
+  const threeMinutes: number = 180000;
+
   useEffect(() => {
     dispatch(definePosts());
-  }, [postsData]);
+    const interval = setInterval(() => {
+      dispatch(definePosts());
+    }, threeMinutes);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <ul className={styles.postsList}>

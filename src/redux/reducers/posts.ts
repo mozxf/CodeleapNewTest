@@ -14,7 +14,7 @@ export const posts = createReducer(initialState, (builder) => {
     return (state = action.payload);
   });
   builder
-    .addCase(createPost, (state) => {
+    .addCase(createPost.fulfilled, (state) => {
       return state;
     })
     .addCase(deletePost.fulfilled, (state) => {

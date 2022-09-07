@@ -4,7 +4,7 @@ import { Title } from '../Title/Title';
 import styles from './DeletePostModal.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDeleteModalVisible } from '@/actions/modalActions';
-import { deletePost } from '@/actions/postsActions';
+import { definePosts, deletePost } from '@/actions/postsActions';
 import { AppDispatch, RootState } from '@/redux/store';
 import { TDeleteHandler } from '@/redux/reducers/modal';
 
@@ -23,9 +23,10 @@ export const DeletePostModal = ({ open }: IDeletePostModal) => {
     dispatch(setDeleteModalVisible(false));
   }
 
-  function handleClickDelete() {
-    dispatch(deletePost(deleteHandler.post_id));
+  async function handleClickDelete() {
     dispatch(setDeleteModalVisible(false));
+    await dispatch(deletePost(deleteHandler.post_id));
+    await dispatch(definePosts());
   }
 
   return (

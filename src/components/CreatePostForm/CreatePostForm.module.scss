@@ -12,3 +12,9 @@
 .title {
   margin-bottom: 0.625rem;
 }
+
+@media (max-width: 550px) {
+  .title {
+    font-size: 1.2rem;
+  }
+}

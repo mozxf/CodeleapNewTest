@@ -6,14 +6,12 @@
   height: fit-content;
   background: $color-lightGray;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
 }
 
 .content {
-  width: 41.6vmax;
+  margin: 0 auto;
+  width: 50rem;
   height: 100vh;
-  max-width: 50rem;
   overflow: scroll;
 }
 
@@ -23,6 +21,9 @@
 }
 
 ::-webkit-scrollbar-track {
+  background: $color-white;
+}
+::-webkit-scrollbar-corner {
   background: $color-white;
 }
 
@@ -57,4 +58,20 @@
   height: fit-content;
   padding: 2.75rem 2.375rem;
   background: $color-white;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    width: 34.375rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .content {
+    width: 100%;
+  }
+
+  .mainContent {
+    padding: 2.75rem 1rem;
+  }
 }

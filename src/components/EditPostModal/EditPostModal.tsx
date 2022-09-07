@@ -6,7 +6,7 @@ import { connect, useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '@/redux/store';
 import { TEditHandler } from '@/redux/reducers/modal';
 import { setEditModalVisible } from '@/actions/modalActions';
-import { editPost } from '@/actions/postsActions';
+import { definePosts, editPost } from '@/actions/postsActions';
 import { TUsername } from '@/redux/reducers/username';
 
 type THandleModal = {
@@ -29,15 +29,16 @@ export const EditPostModal = ({ open }: THandleModal) => {
     setContent(post_data.content);
   }, [post_data]);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    dispatch(
+    dispatch(setEditModalVisible(false));
+    await dispatch(
       editPost({
         id: post_id,
         body: { title, content },
       })
     );
-    dispatch(setEditModalVisible(false));
+    await dispatch(definePosts());
   }
 
   function handleCloseModal() {

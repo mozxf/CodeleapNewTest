@@ -12,7 +12,30 @@ export const definePosts = createAsyncThunk<IPost[]>(
   }
 );
 
-export const createPost = createAction('posts/createPost');
+type TCreatePost = {
+  username: string;
+  title: string;
+  content: string;
+};
+
+export const createPost = createAsyncThunk(
+  'posts/createPost',
+  async ({ username, title, content }: TCreatePost, thunkAPI) => {
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, title, content }),
+    };
+
+    const response = await fetch(
+      `https://dev.codeleap.co.uk/careers/ `,
+      options
+    );
+    return response;
+  }
+);
 
 export const deletePost = createAsyncThunk(
   'posts/deletePost',
